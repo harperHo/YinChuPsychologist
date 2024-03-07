@@ -8,16 +8,12 @@ module.exports = {
       },
       fontFamily: {
         "tp-sans": ["var(--font-tp-sans)"],
-        "chen-yu-luo-yan": ["var(--font-chen-yu-luo-yan)"],
+        "gen-wan-min": ["var(--font-gen-wan-min)"],
       },
       colors: {
-        // primary: "#F0ECEA",
-        // primary: "#F8F6F6",
-        // primary: "#F5F4F0",
-        primary: "#EDE8E3",
         // #CCD0DB blue
-        "profile-pic-bg": "#EDE8E3",
-        brown: "#C2B6A8",
+        // brown: "#C2B6A8",
+        primary: "#EDE8E3",
         "primary-2": "#D1CCC7",
         text: "#22231f",
       },
@@ -57,5 +53,9 @@ module.exports = {
       },
     },
   },
-  plugins: [],
+  plugins: [
+    function ({ addVariant }) {
+      addVariant("child", "& > *");
+    },
+  ],
 };

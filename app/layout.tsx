@@ -1,6 +1,6 @@
 import React from "react";
 
-import { taipeiSans, chenYuLuoYan } from "./styles/fonts";
+import { taipeiSans, genWanMin } from "./styles/fonts";
 import "./globals.css";
 
 export default function RootLayout({
@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${taipeiSans.variable} ${chenYuLuoYan.variable} font-tp-sans bg-primary text-text`}
+      className={`${taipeiSans.variable} ${genWanMin.variable} font-tp-sans bg-primary text-text`}
     >
       <body>{children}</body>
     </html>

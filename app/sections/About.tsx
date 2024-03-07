@@ -1,23 +1,46 @@
-import React from "react";
+import React, { useMemo } from "react";
 import Image from "next/image";
 
+import { specialities } from "./Specialties";
+
+const GROUP_SIZE = 3;
+
 const About: React.FC = () => {
+  const specialityByGroups = useMemo(() => {
+    const _specialityByGroups = [];
+    let i = 0;
+
+    while (i < GROUP_SIZE) {
+      const start = i * GROUP_SIZE;
+      const end = start + GROUP_SIZE;
+
+      _specialityByGroups.push(
+        specialities.slice(start, end).map((speciality) => speciality.title)
+      );
+      i++;
+    }
+
+    return _specialityByGroups;
+  }, []);
+
   return (
-    <div className="flex flex-col md:flex-row">
+    <div className="flex flex-col md:flex-row pb-20">
       <div className="flex-1 flex items-center justify-center flex-col">
         <div className="mb-7 flex flex-col text-center md:text-left">
-          <span className="hidden ml-1 md:inline">諮心字第 004430 號</span>
-          <h2 className="tracking-wider text-2xl mb-2 md:text-4xl md:mb-4">
+          <h2 className="tracking-wider text-2xl mb-2 order-1 md:text-4xl md:mb-4 md:order-2">
             諮商心理師
           </h2>
-          <h1 className="tracking-wider text-6xl md:text-8xl md:ml-4">
+          <h1 className="tracking-wider text-6xl order-2 md:text-8xl md:ml-4 md:order-3">
             劉映竺
           </h1>
-          <span className="text-xs mt-3 md:hidden">諮心字第 004430 號</span>
-        </div>
-        <div className="hidden flex-col justify-center md:flex">
-          <span>長期深度自我探索 / 原生家庭議題 / 人際關係議題</span>
-          <span>多元性別與自我認同 / 情感性精神疾患 / 心理動力取向諮商</span>
+          <div className="text-xs mt-3 order-3 md:ml-1 md:text-base md:order-1">
+            諮心字第 004430 號
+          </div>
+          <div className="hidden flex-col justify-center mt-6 order-4 md:flex">
+            {specialityByGroups.map((specialities, i) => (
+              <span key={i}>{specialities.join(" / ")}</span>
+            ))}
+          </div>
         </div>
       </div>
       <div className="flex-1 flex">

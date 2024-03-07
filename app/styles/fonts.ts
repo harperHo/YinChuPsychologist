@@ -21,9 +21,9 @@ const taipeiSans = localFont({
   variable: "--font-tp-sans",
 });
 
-const chenYuLuoYan = localFont({
-  src: "./fonts/ChenYuluoyan-Thin.ttf",
-  variable: "--font-chen-yu-luo-yan",
+const genWanMin = localFont({
+  src: "./fonts/GenWanMin-Regular.ttf",
+  variable: "--font-gen-wan-min",
 });
 
-export { taipeiSans, chenYuLuoYan };
+export { taipeiSans, genWanMin };
