@@ -2,7 +2,7 @@ import React from "react";
 
 const Article: React.FC = () => {
   return (
-    <div className="flex items-center mt-[-80px]">
+    <div className="flex items-center md:mt-[-80px]">
       <div className="w-0 md:w-1/4"></div>
       <div className="px-8 py-10 bg-white child:mb-5 font-gen-wan-min text-lg md:px-20 md:py-24 md:w-3/4">
         <p className="text-3xl !mb-10">

@@ -36,16 +36,16 @@ const experiences = [
 
 const Experiences: React.FC = () => {
   return (
-    <div className="p-16 h-[500px] flex bg-primary-2 font-gen-wan-min overflow-hidden">
-      <div className="w-[300px]">
+    <div className="py-10 flex flex-col items-center bg-primary-2 font-gen-wan-min overflow-hidden md:p-16 md:h-[500px] md:flex-row md:items-start">
+      <div className="mb-4 md:mb-0 md:w-[300px]">
         <h2 className="text-3xl tracking-wider md:text-4xl">重要經歷</h2>
       </div>
-      <div className="flex-1 flex flex-col w-full [writing-mode:vertical-lr]">
+      <div className="flex-1 flex flex-col w-full md:[writing-mode:vertical-lr]">
         {experiences.map((experience) => (
           <div
-            className="px-6 flex items-center relative text-xl pt-[40px]
-            before:w-[11px] before:h-[11px] before:absolute before:bg-primary before:rounded-full before:top-0
-            after:w-full after:h-[1px] after:absolute after:bg-primary after:top-[5px]"
+            className="pt-6 pl-12 flex items-center relative text-lg md:px-6 md:pt-[40px] md:text-xl
+            before:w-[11px] before:h-[11px] before:absolute before:left-[20px] before:bg-primary before:rounded-full md:before:top-0 md:before:left-auto
+            after:w-[1px] after:h-full after:absolute after:left-[25px] after:bg-primary md:after:w-full md:after:h-[1px] md:after:top-[5px] md:after:left-auto"
           >
             {experience}
           </div>
