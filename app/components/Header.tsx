@@ -7,6 +7,21 @@ import Navigation from "./Navigation";
 import NavigationMenu from "./NavigationMenu";
 import Hamburger from "./Hamburger";
 
+const menuItems = [
+  {
+    name: "關於",
+    id: "about",
+  },
+  {
+    name: "專長議題",
+    id: "specialties",
+  },
+  {
+    name: "重要經歷",
+    id: "experiences",
+  },
+];
+
 const Header: React.FC = () => {
   const [menuOpened, setMenuOpened] = useState(false);
 
@@ -15,27 +30,17 @@ const Header: React.FC = () => {
   }, [menuOpened]);
 
   return (
-    <header className="fixed top-0 flex flex-row items-center w-full px-6 md:px-32 bg-primary h-[180px] z-20">
-      <Image
-        className="absolute top-0 left-1/2 translate-x-1/2-nagative"
-        src="/logo.png"
-        width={180}
-        height={180}
-        alt="logo"
+    <header className="px-6 w-full h-[130px] fixed top-0 flex flex-row items-center bg-primary z-20 md:px-32 md:h-[160px]">
+      <div className="w-[100px] h-[104px] absolute top-1/2 left-1/2 translate-y-1/2-nagative translate-x-1/2-nagative md:w-[130px] md:h-[135px]">
+        <Image src="/logo.png" fill alt="logo" />
+      </div>
+      <Navigation items={menuItems} />
+      <NavigationMenu
+        open={menuOpened}
+        items={menuItems}
+        setMenuOpened={setMenuOpened}
       />
-      <Navigation />
-      <NavigationMenu open={menuOpened} />
       <Hamburger shouldTransform={menuOpened} onClick={onClickHamburger} />
-      {/* <div className="flex-1 hidden">
-        <Navigation />
-      </div>
-      <div className="flex-1 flex justify-center">
-        
-      </div>
-      <div className="flex-1">
-        <NavigationMenu open={menuOpened} />
-        <Hamburger shouldTransform={menuOpened} onClick={onClickHamburger} />
-      </div> */}
     </header>
   );
 };

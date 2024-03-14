@@ -1,19 +1,24 @@
 import React from "react";
 import Link from "next/link";
 
-const Navigation: React.FC = () => {
+interface Item {
+  name: string;
+  id: string;
+}
+
+export interface NavigationProps {
+  items: Item[];
+}
+
+const Navigation: React.FC<NavigationProps> = ({ items }) => {
   return (
     <nav className="hidden md:flex items-center">
       <ul className="flex flex-row space-x-20 tracking-widest">
-        <li>
-          <Link href="#about">關於</Link>
-        </li>
-        <li>
-          <Link href="#specialties">專長議題</Link>
-        </li>
-        <li>
-          <Link href="#experiences">重要經歷</Link>
-        </li>
+        {items.map(({ name, id }) => (
+          <li>
+            <Link href={`#${id}`}>{name}</Link>
+          </li>
+        ))}
       </ul>
     </nav>
   );

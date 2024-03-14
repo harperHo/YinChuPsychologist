@@ -5,7 +5,7 @@ interface ContentProps {
 }
 
 const Content: React.FC<ContentProps> = ({ children }) => {
-  return <main className="mt-[180px]">{children}</main>;
+  return <main>{children}</main>;
 };
 
 export default Content;

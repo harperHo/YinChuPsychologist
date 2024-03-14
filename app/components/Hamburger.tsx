@@ -15,7 +15,7 @@ const Hamburger: React.FC<HamburgerProps> = ({ shouldTransform, onClick }) => {
         className={`w-[32px] h-px bg-black ${
           shouldTransform
             ? "animate-[burgerRotateRight_300ms_ease-in-out_forwards]"
-            : "animate-[burgerRightReverse_300ms_ease-in-out_forwards]"
+            : "animate-[burgerRotateRightReverse_300ms_ease-in-out_forwards]"
         }`}
       />
       <div

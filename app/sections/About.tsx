@@ -24,7 +24,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="flex flex-col md:flex-row pb-20">
+    <div className="pb-20 mt-[130px] flex flex-col md:mt-[160px] md:flex-row">
       <div className="flex-1 flex items-center justify-center flex-col">
         <div className="mb-7 flex flex-col text-center md:text-left">
           <h2 className="tracking-wider text-2xl mb-2 order-1 md:text-4xl md:mb-4 md:order-2">

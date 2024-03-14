@@ -11,7 +11,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${taipeiSans.variable} ${genWanMin.variable} font-tp-sans bg-primary text-text`}
+      className={`${taipeiSans.variable} ${genWanMin.variable} font-tp-sans bg-primary text-text scroll-smooth`}
     >
       <body>{children}</body>
     </html>
