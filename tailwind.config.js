@@ -11,10 +11,9 @@ module.exports = {
         "gen-wan-min": ["var(--font-gen-wan-min)"],
       },
       colors: {
-        // #CCD0DB blue
-        // brown: "#C2B6A8",
-        primary: "#EDE8E3",
-        "primary-2": "#D1CCC7",
+        sand: "#EDE8E3",
+        grey: "#D1CCC7",
+        "brick-red": "#D1B7A8",
         text: "#22231f",
       },
       keyframes: {

@@ -24,7 +24,7 @@ const About: React.FC = () => {
   }, []);
 
   return (
-    <div className="pb-20 mt-[130px] flex flex-col md:mt-[160px] md:flex-row">
+    <div className="pt-[130px] pb-20 flex flex-col md:pt-[160px] md:flex-row">
       <div className="flex-1 flex items-center justify-center flex-col">
         <div className="mb-7 flex flex-col text-center md:text-left">
           <h2 className="tracking-wider text-2xl mb-2 order-1 md:text-4xl md:mb-4 md:order-2">
@@ -44,7 +44,7 @@ const About: React.FC = () => {
         </div>
       </div>
       <div className="flex-1 flex">
-        <div className="pt-10 mx-5 w-[450px] flex justify-center bg-primary-2 rounded-[120px] rounded-br-none overflow-hidden md:mx-9">
+        <div className="pt-10 mx-5 w-[450px] flex justify-center bg-grey rounded-[120px] rounded-br-none overflow-hidden md:mx-9">
           <div className="relative w-[200px] h-[374px] md:w-[250px] md:h-[468px]">
             <Image src="/profilePic.png" fill alt="Picture of the author" />
           </div>

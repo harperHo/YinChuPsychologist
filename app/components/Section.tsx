@@ -6,7 +6,14 @@ interface SectionProps {
 }
 
 const Section: React.FC<SectionProps> = ({ id, children }) => {
-  return <div {...(id ? { id } : {})}>{children}</div>;
+  return (
+    <div
+      className="pt-[130px] mt-[-130px] md:pt-[159px] md:mt-[-159px]"
+      {...(id ? { id } : {})}
+    >
+      {children}
+    </div>
+  );
 };
 
 export default Section;
