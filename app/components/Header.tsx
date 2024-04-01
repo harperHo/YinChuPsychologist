@@ -64,7 +64,7 @@ const Header: React.FC = () => {
     }
   }, []);
 
-  const onClickLogo = useCallback((e) => {
+  const onClickLogo = useCallback(() => {
     const section = document.getElementById("about");
     window.scrollTo({ top: section.offsetTop, behavior: "smooth" });
   }, []);
@@ -76,10 +76,17 @@ const Header: React.FC = () => {
   return (
     <header className="px-6 w-full h-[130px] fixed top-0 flex flex-row items-center justify-between bg-sand z-20 md:px-32 md:h-[160px]">
       <div
-        className="w-[100px] h-[104px] absolute top-1/2 left-1/2 translate-y-1/2-nagative translate-x-1/2-nagative cursor-pointer md:w-[130px] md:h-[135px]"
+        className="w-[100px] absolute top-1/2 left-1/2 translate-y-1/2-nagative translate-x-1/2-nagative cursor-pointer md:w-[130px]"
         onClick={onClickLogo}
       >
-        <Image src="/logo.png" fill alt="logo" />
+        <Image
+          className="w-full h-auto"
+          src="/logo.png"
+          alt="Logo"
+          priority={true}
+          width={130}
+          height={136}
+        />
       </div>
       <Navigation
         items={menuItems}

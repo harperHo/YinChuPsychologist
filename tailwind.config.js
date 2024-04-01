@@ -49,6 +49,44 @@ module.exports = {
             transform: "rotate(0deg) translate(0, 0)",
           },
         },
+        "fade-in": {
+          "0%": {
+            opacity: 0,
+          },
+          "100%": {
+            opacity: 1,
+          },
+        },
+        "fade-in-lr": {
+          "0%": {
+            opacity: 0,
+            transform: "translate(-10px, 0)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(0, 0)",
+          },
+        },
+        "fade-in-rl": {
+          "0%": {
+            opacity: 0,
+            transform: "translate(10px, 0)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(0, 0)",
+          },
+        },
+        "fade-in-bt": {
+          "0%": {
+            opacity: 0,
+            transform: "translate(0, 10px)",
+          },
+          "100%": {
+            opacity: 1,
+            transform: "translate(0, 0)",
+          },
+        },
       },
     },
   },

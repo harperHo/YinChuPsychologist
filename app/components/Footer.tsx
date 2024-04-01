@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <br />
         <a href="mailto:yc.liu05@gmail.com">yc.liu05@gmail.com</a>
       </p>
-      <p className="mt-6 text-xs md:mt-10">© 2022 All rights reserved</p>
+      <p className="mt-6 text-xs md:mt-10">© 2024 All rights reserved</p>
     </footer>
   );
 };

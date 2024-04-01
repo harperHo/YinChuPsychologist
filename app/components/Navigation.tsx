@@ -25,6 +25,7 @@ const Navigation: React.FC<NavigationProps> = ({
 
             return (
               <li
+                key={id}
                 className={`pb-[2px] relative after:h-[1px] after:w-0 after:bg-text after:absolute after:left-0 after:bottom-0 ${
                   isActive ? "after:!w-full" : ""
                 } after:transition-all after:duration-300 hover:after:w-full`}

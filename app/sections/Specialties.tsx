@@ -28,9 +28,9 @@ export const specialities = [
 
 const Specialties: React.FC = () => {
   return (
-    <div className="py-16 px-10 flex flex-col items-center font-gen-wan-min md:px-36">
+    <div className="py-10 px-10 flex flex-col items-center font-gen-wan-min md:py-16 md:px-36">
       <h2 className="text-3xl tracking-wider md:text-4xl">專長議題</h2>
-      <div className="grid grid-cols-1 mt-10 w-full md:mt-16 md:grid-cols-3">
+      <div className="mt-8 w-full grid grid-cols-1 md:mt-16 md:grid-cols-3">
         {specialities.map(({ title, desc }) => (
           <div key={title} className="p-7 pr-0 relative md:p-10 md:pr-10">
             <div className="w-[80px] h-[80px] absolute rounded-full bg-grey z-0 top-0 left-0 md:w-[120px] md:h-[120px]" />

@@ -57,6 +57,7 @@ const Experiences: React.FC = () => {
       <div className="flex-1 flex flex-col w-full md:[writing-mode:vertical-lr]">
         {experiences.map(({ title, subTitle }) => (
           <div
+            key={`${title}_${subTitle}`}
             className="pt-6 pl-12 flex items-center relative text-lg md:px-6 md:pt-[40px] md:text-xl
             before:w-[11px] before:h-[11px] before:absolute before:left-[20px] before:bg-sand before:rounded-full md:before:top-0 md:before:left-auto
             after:w-[1px] after:h-full after:absolute after:left-[25px] after:bg-sand md:after:w-full md:after:h-[1px] md:after:top-[5px] md:after:left-auto"

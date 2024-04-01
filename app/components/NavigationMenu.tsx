@@ -31,7 +31,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({
     >
       <ul className="pl-16 text-2xl space-y-8">
         {items.map(({ name, id }) => (
-          <li>
+          <li key={id}>
             <div
               className="cursor-pointer"
               data-scroll-to={id}
