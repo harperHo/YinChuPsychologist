@@ -29,16 +29,16 @@ const About: React.FC = () => {
   }, []);
 
   const fadeInSlowCls = isIntersecting
-    ? "opacity-1 animate-[fade-in-lr_800ms_ease-in-out]"
+    ? "animate-[fade-in-bt_500ms_ease-in-out] md:animate-[fade-in-lr_800ms_ease-in-out]"
     : "opacity-0";
   const fadeInCls = isIntersecting
-    ? "opacity-1 animate-[fade-in_500ms_ease-in-out]"
+    ? "animate-[fade-in-bt_500ms_ease-in-out] md:animate-[fade-in_500ms_ease-in-out]"
     : "opacity-0";
   const fadeInSpecialitiesCls = isIntersecting
-    ? "opacity-1 animate-[fade-in-bt_800ms_ease-in-out]"
+    ? "animate-[fade-in-bt_800ms_ease-in-out]"
     : "opacity-0";
   const fadeInPictureCls = isIntersecting
-    ? "opacity-1 animate-[fade-in-rl_500ms_ease-in-out]"
+    ? "animate-[fade-in-bt_500ms_ease-in-out] md:animate-[fade-in-rl_500ms_ease-in-out]"
     : "opacity-0";
 
   return (

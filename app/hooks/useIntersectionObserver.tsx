@@ -4,14 +4,22 @@ const useIntersectionObserver = (options) => {
   const ref = useRef(null);
   const { root = null, rootMargin = "0px", threshold = 1 } = options;
   const [isIntersecting, setIsIntersecting] = useState(false);
+  const [hasShown, setHasShown] = useState(false);
 
-  const callback = useCallback((entries) => {
-    const [entry] = entries;
+  const callback = useCallback(
+    (entries) => {
+      const [entry] = entries;
 
-    if (entry) {
-      setIsIntersecting(entry?.isIntersecting || false);
-    }
-  }, []);
+      if (entry) {
+        setIsIntersecting(entry?.isIntersecting || false);
+
+        if (!hasShown && entry?.isIntersecting) {
+          setHasShown(true);
+        }
+      }
+    },
+    [hasShown]
+  );
 
   useEffect(() => {
     const observer = new IntersectionObserver(callback, {
@@ -30,6 +38,7 @@ const useIntersectionObserver = (options) => {
   return {
     ref,
     isIntersecting,
+    hasShown,
   };
 };
 

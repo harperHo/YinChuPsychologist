@@ -60,7 +60,7 @@ module.exports = {
         "fade-in-lr": {
           "0%": {
             opacity: 0,
-            transform: "translate(-10px, 0)",
+            transform: "translate(-20px, 0)",
           },
           "100%": {
             opacity: 1,
@@ -70,7 +70,7 @@ module.exports = {
         "fade-in-rl": {
           "0%": {
             opacity: 0,
-            transform: "translate(10px, 0)",
+            transform: "translate(20px, 0)",
           },
           "100%": {
             opacity: 1,
@@ -80,7 +80,7 @@ module.exports = {
         "fade-in-bt": {
           "0%": {
             opacity: 0,
-            transform: "translate(0, 10px)",
+            transform: "translate(0, 20px)",
           },
           "100%": {
             opacity: 1,
@@ -91,8 +91,15 @@ module.exports = {
     },
   },
   plugins: [
-    function ({ addVariant }) {
+    function ({ addVariant, matchUtilities }) {
       addVariant("child", "& > *");
+      matchUtilities({
+        "animation-delay": (value) => {
+          return {
+            "animation-delay": value,
+          };
+        },
+      });
     },
   ],
 };

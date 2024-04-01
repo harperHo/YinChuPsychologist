@@ -4,11 +4,12 @@ import Image from "next/image";
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const Preface: React.FC = () => {
-  const { isIntersecting, ref } = useIntersectionObserver({
-    threshold: 0,
+  const { hasShown, ref } = useIntersectionObserver({
+    threshold: 0.25,
   });
-  const fadeInCls = isIntersecting
-    ? "opacity-1 animate-[fade-in-bt_600ms_ease-in-out]"
+
+  const fadeInCls = hasShown
+    ? "animate-[fade-in_300ms_ease-in-out] md:animate-[fade-in-bt_600ms_ease-in-out]"
     : "opacity-0";
 
   return (
