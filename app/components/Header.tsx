@@ -24,7 +24,7 @@ const menuItems = [
 
 const Header: React.FC = () => {
   const [activeSectionId, setActiveSectionId] = useState("about");
-  const [menuOpened, setMenuOpened] = useState(false);
+  const [menuOpened, setMenuOpened] = useState<boolean>(null);
 
   useEffect(() => {
     const handleScroll = () => {

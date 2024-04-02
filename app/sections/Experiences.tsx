@@ -1,5 +1,7 @@
 import React from "react";
 
+import useIntersectionObserver from "../hooks/useIntersectionObserver";
+
 const experiences = [
   {
     title: "中國文化大學",
@@ -49,18 +51,37 @@ const Experience: React.FC<ExperienceProps> = ({ title, subTitle }) => {
 };
 
 const Experiences: React.FC = () => {
+  const { hasShown, ref } = useIntersectionObserver({
+    threshold: 0.25,
+  });
+
+  const growLineCls = hasShown
+    ? `before:h-full md:before:w-full`
+    : "before:h-0 md:before:w-0";
+  const fadeInCls = hasShown
+    ? `animate-[fade-in_300ms_ease-in-out_forwards]`
+    : "opacity-0";
+
   return (
-    <div className="py-10 flex flex-col items-center bg-grey font-gen-wan-min overflow-hidden md:p-16 md:h-[500px] md:flex-row md:items-start">
-      <div className="mb-4 md:mb-0 md:w-[300px]">
+    <div
+      ref={ref}
+      className="py-10 flex flex-col items-center bg-grey font-gen-wan-min overflow-hidden md:p-16 md:h-[500px] md:flex-row md:items-start"
+    >
+      <div className="mb-8 md:mb-0 md:w-[300px]">
         <h2 className="text-3xl tracking-wider md:text-4xl">重要經歷</h2>
       </div>
-      <div className="flex-1 flex flex-col w-full md:[writing-mode:vertical-lr]">
-        {experiences.map(({ title, subTitle }) => (
+      <div
+        className={`flex flex-col w-full relative md:w-auto md:[writing-mode:vertical-lr]
+        before:w-px before:left-[25px] before:absolute before:bg-sand before:duration-1000 md:before:h-px md:before:top-[5px] md:before:left-0 ${growLineCls} `}
+      >
+        {experiences.map(({ title, subTitle }, index) => (
           <div
             key={`${title}_${subTitle}`}
-            className="pt-6 pl-12 flex items-center relative text-lg md:px-6 md:pt-[40px] md:text-xl
-            before:w-[11px] before:h-[11px] before:absolute before:left-[20px] before:bg-sand before:rounded-full md:before:top-0 md:before:left-auto
-            after:w-[1px] after:h-full after:absolute after:left-[25px] after:bg-sand md:after:w-full md:after:h-[1px] md:after:top-[5px] md:after:left-auto"
+            className={`py-2 pl-12 flex items-center relative text-lg opacity-0 md:px-6 md:pt-[40px] md:text-xl
+            before:w-[11px] before:h-[11px] before:absolute before:left-[20px] before:bg-sand before:rounded-full md:before:top-0 md:before:left-auto ${fadeInCls}`}
+            style={{
+              animationDelay: `${index * (1000 / experiences.length)}ms`,
+            }}
           >
             <Experience title={title} subTitle={subTitle} />
           </div>

@@ -17,7 +17,7 @@ module.exports = {
         text: "#22231f",
       },
       keyframes: {
-        burgerRotateRight: {
+        "burger-rotate-right": {
           "0%": {
             transform: "rotate(0deg)",
           },
@@ -25,7 +25,7 @@ module.exports = {
             transform: "rotate(45deg) translate(4px, 4px)",
           },
         },
-        burgerRotateRightReverse: {
+        "burger-rotate-right-reverse": {
           "0%": {
             transform: "rotate(45deg) translate(4px, 4px)",
           },
@@ -33,7 +33,7 @@ module.exports = {
             transform: "rotate(0deg) translate(0, 0)",
           },
         },
-        burgerRotateLeft: {
+        "burger-rotate-left": {
           "0%": {
             transform: "rotate(0deg)",
           },
@@ -41,7 +41,7 @@ module.exports = {
             transform: "rotate(-45deg) translate(5px, -5px)",
           },
         },
-        burgerRotateLeftReverse: {
+        "burger-rotate-left-reverse": {
           "0%": {
             transform: "rotate(-45deg) translate(5px, -5px)",
           },

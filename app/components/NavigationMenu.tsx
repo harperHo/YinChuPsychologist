@@ -25,7 +25,7 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({
 
   return (
     <nav
-      className={`absolute bg-sand left-0 top-0 w-screen h-[calc(100vh-5em)] flex items-center ${
+      className={`absolute bg-sand left-0 top-0 w-screen h-dvh flex items-center ${
         open ? "visible" : "invisible"
       } ${open ? "opacity-1" : "opacity-0"} transition-all duration-500`}
     >
