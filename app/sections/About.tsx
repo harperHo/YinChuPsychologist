@@ -3,6 +3,7 @@ import Image from "next/image";
 
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
 import { specialities } from "./Specialties";
+import { basePath } from "../../next.config";
 
 const GROUP_SIZE = 3;
 
@@ -79,7 +80,7 @@ const About: React.FC = () => {
           <div className="relative w-[200px] h-[374px] md:w-[250px] md:h-[468px]">
             <Image
               className="w-full h-auto"
-              src="/profilePic.png"
+              src={`${basePath}/profilePic.png`}
               alt="Picture of the author"
               priority={true}
               width={250}

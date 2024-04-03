@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 import useIntersectionObserver from "../hooks/useIntersectionObserver";
+import { basePath } from "../../next.config";
 
 const Preface: React.FC = () => {
   const { hasShown, ref } = useIntersectionObserver({
@@ -21,7 +22,7 @@ const Preface: React.FC = () => {
         className={`flex flex-col items-center font-gen-wan-min text-white text-center md:w-1/2 md:text-xl ${fadeInCls}`}
       >
         <Image
-          src="/quotes.png"
+          src={`${basePath}/quotes.png`}
           width={50}
           height={38}
           alt="quotes"

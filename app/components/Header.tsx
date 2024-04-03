@@ -6,6 +6,7 @@ import Image from "next/image";
 import Navigation from "./Navigation";
 import NavigationMenu from "./NavigationMenu";
 import Hamburger from "./Hamburger";
+import { basePath } from "../../next.config";
 
 const menuItems = [
   {
@@ -81,7 +82,7 @@ const Header: React.FC = () => {
       >
         <Image
           className="w-full h-auto"
-          src="/logo.png"
+          src={`${basePath}/logo.png`}
           alt="Logo"
           priority={true}
           width={130}
