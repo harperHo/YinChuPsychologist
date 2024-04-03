@@ -45,7 +45,7 @@ const About: React.FC = () => {
   return (
     <div
       ref={ref}
-      className="pt-[130px] pb-20 flex flex-col md:pt-[160px] md:flex-row"
+      className="pt-[130px] pb-10 flex flex-col md:pt-[160px] md:pb-20 md:flex-row"
     >
       <div className="flex-1 flex items-center justify-center flex-col">
         <div className="mb-7 flex flex-col text-center md:text-left">
