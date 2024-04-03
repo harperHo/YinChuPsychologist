@@ -4,7 +4,9 @@
 const nextConfig = {
   output: "export",
   basePath: "/YinChuPsychologist",
-  assetPrefix: "/YinChuPsychologist/",
+  images: {
+    unoptimized: true,
+  },
 };
 
 module.exports = nextConfig;
