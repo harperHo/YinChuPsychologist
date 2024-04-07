@@ -16,10 +16,10 @@ const Preface: React.FC = () => {
   return (
     <div
       ref={ref}
-      className="p-10 flex justify-center bg-[#96988B] md:pt-14 md:pb-16 "
+      className="px-10 pt-10 pb-12 flex justify-center bg-[#96988B] md:pt-14 md:pb-16 "
     >
       <div
-        className={`flex flex-col items-center font-gen-wan-min text-white text-center md:w-1/2 md:text-xl ${fadeInCls}`}
+        className={`flex flex-col items-center font-gen-wan-min text-white text-center md:w-2/3 md:text-xl ${fadeInCls} lg:w-1/2`}
       >
         <Image
           src={`${basePath}/quotes.png`}

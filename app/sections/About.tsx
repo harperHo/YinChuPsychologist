@@ -47,25 +47,25 @@ const About: React.FC = () => {
       ref={ref}
       className="pt-[130px] pb-10 flex flex-col md:pt-[160px] md:pb-20 md:flex-row"
     >
-      <div className="flex-1 flex items-center justify-center flex-col">
+      <div className="flex-1 flex items-center justify-center flex-col md:px-5">
         <div className="mb-7 flex flex-col text-center md:text-left">
           <h2
-            className={`tracking-wider text-2xl mb-2 order-1 md:text-4xl md:mb-4 md:order-2 ${fadeInSlowCls}`}
+            className={`tracking-wider text-2xl mb-2 order-1 ${fadeInSlowCls} md:text-3xl md:mb-4 md:order-2 lg:text-4xl`}
           >
             諮商心理師
           </h2>
           <h1
-            className={`tracking-wider text-6xl order-2 md:text-8xl md:ml-4 md:order-3 ${fadeInCls}`}
+            className={`tracking-wider text-6xl order-2 ${fadeInCls} md:text-7xl md:ml-4 md:order-3 lg:text-8xl`}
           >
             劉映竺
           </h1>
           <div
-            className={`text-xs mt-3 order-3 md:ml-1 md:text-base md:order-1 ${fadeInSlowCls}`}
+            className={`text-xs mt-3 order-3 ${fadeInSlowCls} md:ml-1 md:text-base md:order-1`}
           >
             諮心字第 004430 號
           </div>
           <div
-            className={`hidden flex-col justify-center mt-6 order-4 md:flex ${fadeInSpecialitiesCls}`}
+            className={`hidden flex-col justify-center mt-6 order-4 ${fadeInSpecialitiesCls} md:flex`}
           >
             {specialityByGroups.map((specialities, i) => (
               <span key={i}>{specialities.join(" / ")}</span>
@@ -73,11 +73,11 @@ const About: React.FC = () => {
           </div>
         </div>
       </div>
-      <div className="flex-1 flex">
+      <div className="flex-1 flex justify-center md:justify-start">
         <div
-          className={`pt-10 mx-5 w-[450px] flex justify-center bg-grey rounded-[120px] rounded-br-none overflow-hidden md:mx-9 ${fadeInPictureCls}`}
+          className={`pt-10 mx-5 w-[100%] max-w-[450px] flex justify-center bg-grey rounded-[120px] rounded-br-none overflow-hidden ${fadeInPictureCls} md:mr-5 md:ml-0`}
         >
-          <div className="relative w-[200px] h-[374px] md:w-[250px] md:h-[468px]">
+          <div className="relative w-[55%]">
             <Image
               className="w-full h-auto"
               src={`${basePath}/profilePic.png`}

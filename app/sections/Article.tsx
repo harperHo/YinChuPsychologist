@@ -2,8 +2,8 @@ import React from "react";
 
 const Article: React.FC = () => {
   return (
-    <div className="flex md:mt-[-80px] md:justify-end">
-      <div className="px-8 py-14 bg-white child:mb-5 font-gen-wan-min text-lg md:px-20 md:py-24 md:w-3/4">
+    <div className="flex md:justify-center lg:mt-[-80px]">
+      <div className="px-8 py-14 bg-white child:mb-5 font-gen-wan-min text-lg md:px-20 md:py-24 lg:w-[1040px]">
         <p className="text-3xl !mb-10">
           致 看了許多心理書籍、文章，但還是感到挫折的你
         </p>

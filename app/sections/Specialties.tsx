@@ -36,10 +36,10 @@ const Specialties: React.FC = () => {
   return (
     <div
       ref={ref}
-      className="py-10 px-10 flex flex-col items-center font-gen-wan-min md:py-16 md:px-36"
+      className="py-10 px-10 flex flex-col items-center font-gen-wan-min md:py-16 md:px-10 xl:px-36"
     >
       <h2 className="text-3xl tracking-wider md:text-4xl">專長議題</h2>
-      <div className="mt-8 w-full grid grid-cols-1 md:mt-16 md:grid-cols-3">
+      <div className="mt-8 w-full grid grid-cols-1 md:mt-16 md:grid-cols-2 lg:grid-cols-3">
         {specialities.map(({ title, desc }, index) => {
           const fadeInCls = hasShown
             ? `animate-[fade-in-bt_800ms_ease-in-out_forwards]`

@@ -4,35 +4,32 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const experiences = [
   {
-    title: "中國文化大學",
-    subTitle: "心理輔導學系研究所 碩士",
-  },
-  {
     title: "擁抱心理諮商所",
     subTitle: "兼任心理師",
+  },
+  {
+    title: "臺灣科技大學",
+    subTitle: "團體帶領者",
+  },
+  {
+    title: "基隆看守所毒品方案",
+    subTitle: "合作心理師",
   },
   {
     title: "暖心全人諮商中心",
     subTitle: "兼任心理師",
   },
   {
-    title: "臺北城市科大",
-    subTitle: "兼任通識課講師",
-  },
-  {
-    title: "戒菸專線服務中心",
-    subTitle: "兼任諮詢員",
-  },
-  {
     title: "淡水樂智據點",
     subTitle: "團體帶領者",
   },
   {
-    title: "全國自殺防治中心 專員",
-  },
-  {
     title: "台北市立聯合醫院松德院區",
     subTitle: "思想起心理治療中心 治療師",
+  },
+  {
+    title: "中國文化大學",
+    subTitle: "心理輔導學系研究所 碩士",
   },
 ];
 
@@ -65,9 +62,9 @@ const Experiences: React.FC = () => {
   return (
     <div
       ref={ref}
-      className="py-10 flex flex-col items-center bg-grey font-gen-wan-min overflow-hidden md:p-16 md:h-[500px] md:flex-row md:items-start"
+      className="py-10 flex flex-col items-center bg-grey font-gen-wan-min overflow-hidden md:p-16 md:h-[500px] lg:items-start lg:flex-row"
     >
-      <div className="mb-8 md:mb-0 md:w-[300px]">
+      <div className="mb-8 lg:mb-0 lg:w-[300px]">
         <h2 className="text-3xl tracking-wider md:text-4xl">重要經歷</h2>
       </div>
       <div

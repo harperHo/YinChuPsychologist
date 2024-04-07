@@ -75,9 +75,9 @@ const Header: React.FC = () => {
   }, [menuOpened]);
 
   return (
-    <header className="px-6 w-full h-[130px] fixed top-0 flex flex-row items-center justify-between bg-sand z-20 md:px-32 md:h-[160px]">
+    <header className="w-full h-[130px] fixed top-0 flex flex-row items-center justify-between bg-sand z-20 md:pr-16 md:h-[160px] lg:pr-32">
       <div
-        className="w-[100px] absolute top-1/2 left-1/2 translate-y-1/2-nagative translate-x-1/2-nagative cursor-pointer md:w-[130px]"
+        className="w-[100px] absolute top-1/2 left-1/2 translate-y-1/2-nagative translate-x-1/2-nagative cursor-pointer md:w-[130px] md:left-8 md:translate-x-0 lg:left-16"
         onClick={onClickLogo}
       >
         <Image
