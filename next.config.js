@@ -3,7 +3,7 @@
  */
 const nextConfig = {
   output: "export",
-  basePath: "/YinChuPsychologist",
+  basePath: "",
   images: {
     unoptimized: true,
   },
