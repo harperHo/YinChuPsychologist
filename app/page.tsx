@@ -12,6 +12,7 @@ import Specialties from "./sections/Specialties";
 import Experiences from "./sections/Experiences";
 import Preface from "./sections/Preface";
 import Article from "./sections/Article";
+import Contact from "./sections/Contact";
 
 export default function Page() {
   return (
@@ -31,8 +32,11 @@ export default function Page() {
         <Section id="experiences">
           <Experiences />
         </Section>
-        <Section>
+        <Section id="article">
           <Article />
+        </Section>
+        <Section id="contact">
+          <Contact />
         </Section>
       </Content>
       <Footer />

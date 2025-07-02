@@ -40,11 +40,6 @@ const Navigation: React.FC<NavigationProps> = ({
               </li>
             );
           })}
-          <li
-            className={`pb-[2px] relative after:h-[1px] after:w-0 after:bg-text after:absolute after:left-0 after:bottom-0 after:transition-all after:duration-300 hover:after:w-full`}
-          >
-            <a href="mailto:yc.liu05@gmail.com">聯絡我</a>
-          </li>
         </ul>
       </nav>
     </div>

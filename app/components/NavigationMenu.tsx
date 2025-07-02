@@ -41,9 +41,6 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({
             </div>
           </li>
         ))}
-        <li>
-          <a href="mailto:yc.liu05@gmail.com">聯絡我</a>
-        </li>
       </ul>
     </nav>
   );

@@ -21,6 +21,10 @@ const menuItems = [
     name: "重要經歷",
     id: "experiences",
   },
+  {
+    name: "聯絡我",
+    id: "contact",
+  },
 ];
 
 const Header: React.FC = () => {
@@ -29,8 +33,9 @@ const Header: React.FC = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = document.querySelectorAll("div[id]");
+      const sections = document.querySelectorAll("main > div[id]");
       const scrollPosition = window.scrollY;
+      const contactElement = document.getElementById("contact");
 
       for (let i = 0; i < sections.length; i++) {
         const section = sections[i] as HTMLElement;
@@ -45,6 +50,16 @@ const Header: React.FC = () => {
           scrollPosition < lowerThreshold
         ) {
           setActiveSectionId(section.id);
+        }
+      }
+
+      if (contactElement) {
+        const contactTop = contactElement.offsetTop;
+        const contactBottom = contactTop + contactElement.offsetHeight;
+        const scrollBottom = scrollPosition + window.innerHeight;
+
+        if (scrollBottom > contactTop && scrollPosition < contactBottom) {
+          setActiveSectionId("contact");
         }
       }
     };
