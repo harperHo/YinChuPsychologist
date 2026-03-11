@@ -1,5 +1,4 @@
 import React, { useCallback, Dispatch, SetStateAction } from "react";
-import Link from "next/link";
 
 import { NavigationProps } from "./Navigation";
 
@@ -30,15 +29,26 @@ const NavigationMenu: React.FC<NavigationMenuProps> = ({
       } ${open ? "opacity-1" : "opacity-0"} transition-all duration-500`}
     >
       <ul className="pl-16 text-2xl space-y-8">
-        {items.map(({ name, id }) => (
+        {items.map(({ name, id, href }) => (
           <li key={id}>
-            <div
-              className="cursor-pointer"
-              data-scroll-to={id}
-              onClick={onClick}
-            >
-              {name}
-            </div>
+            {href ? (
+              <a
+                className="cursor-pointer"
+                href={href}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                {name}
+              </a>
+            ) : (
+              <div
+                className="cursor-pointer"
+                data-scroll-to={id}
+                onClick={onClick}
+              >
+                {name}
+              </div>
+            )}
           </li>
         ))}
       </ul>

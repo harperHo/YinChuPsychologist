@@ -1,8 +1,9 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 interface Item {
   name: string;
   id: string;
+  href?: string;
 }
 
 export interface NavigationProps {
@@ -20,7 +21,7 @@ const Navigation: React.FC<NavigationProps> = ({
     <div className="w-full hidden justify-end md:flex">
       <nav className="items-center">
         <ul className="flex flex-row space-x-20 tracking-widest">
-          {items.map(({ name, id }) => {
+          {items.map(({ name, id, href }) => {
             const isActive = id === activeItem;
 
             return (
@@ -30,13 +31,24 @@ const Navigation: React.FC<NavigationProps> = ({
                   isActive ? "after:!w-full" : ""
                 } after:transition-all after:duration-300 hover:after:w-full`}
               >
-                <div
-                  className="cursor-pointer"
-                  data-scroll-to={id}
-                  onClick={onClickItem}
-                >
-                  {name}
-                </div>
+                {href ? (
+                  <a
+                    className="cursor-pointer"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    {name}
+                  </a>
+                ) : (
+                  <div
+                    className="cursor-pointer"
+                    data-scroll-to={id}
+                    onClick={onClickItem}
+                  >
+                    {name}
+                  </div>
+                )}
               </li>
             );
           })}

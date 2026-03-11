@@ -44,6 +44,14 @@ const Article: React.FC = () => {
           我一直很在乎真實，或許是溫尼考特所說的真我，心理工作是貼近真實、而非打造一個理想但不真實的自我
           （而我們很多時候在這個世界上不就已經在扮演出一個「非我」的角色了嗎？）的過程，這不是讀書讀來的，這是進到治療室中體會到的。
         </p>
+        <a
+          href="https://medium.com/@yc.liu05"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-10 text-text hover:opacity-70 transition-opacity"
+        >
+          閱讀更多文章 →
+        </a>
       </div>
     </div>
   );

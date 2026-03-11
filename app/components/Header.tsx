@@ -22,6 +22,11 @@ const menuItems = [
     id: "experiences",
   },
   {
+    name: "專業文章",
+    id: "blog",
+    href: "https://medium.com/@yc.liu05",
+  },
+  {
     name: "聯絡我",
     id: "contact",
   },
