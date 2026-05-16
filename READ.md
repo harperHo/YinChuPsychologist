@@ -22,6 +22,17 @@ npm run lint
 ```
 Check code for errors and style issues.
 
+```bash
+npm run subset-fonts
+```
+Regenerate subset fonts after updating website content. The script extracts all characters used in the website and creates optimized WOFF2 font files.
+
+First time setup:
+```bash
+python3 -m venv .venv
+.venv/bin/pip install fonttools brotli
+```
+
 ## Commit Message Format
 
 Use [Conventional Commits](https://www.conventionalcommits.org/) format:
