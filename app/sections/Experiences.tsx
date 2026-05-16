@@ -4,8 +4,8 @@ import useIntersectionObserver from "../hooks/useIntersectionObserver";
 
 const experiences = [
   {
-    title: "擁抱心理諮商所",
-    subTitle: "心理師",
+    title: "台北市社區諮商所",
+    subTitle: "行動心理師",
   },
   {
     title: "臺灣科技大學",
@@ -14,10 +14,6 @@ const experiences = [
   {
     title: "基隆看守所毒品方案",
     subTitle: "合作心理師",
-  },
-  {
-    title: "暖心全人諮商中心",
-    subTitle: "心理師",
   },
   {
     title: "淡水樂智據點",
